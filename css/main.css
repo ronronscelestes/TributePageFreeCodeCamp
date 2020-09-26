@@ -13,22 +13,31 @@
     padding: 0;
 }
 
-.header {
-    background-image: linear-gradient(to bottom, rgba(61, 50, 75, 0) 55%, rgba(61, 50, 75, 1)), url(../img/Headerforest.png);
+body {
+    background: rgba(61, 50, 75, 1);
+}
+
+.wrapper-intro {
+    background-image: linear-gradient(to bottom, rgba(61, 50, 75, 0) 55%, rgba(61, 50, 75, 1)), url(../img/Headerforest_wide.png);
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 1196px;
+}
+
+.container-intro {
+    height: 100vh;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
-.headertitle {
-    max-width: 824px;
-    margin: 160px 50px 0px 50px;
+.content-intro {
+    padding: 32px;
 }
 
 h1 {
+    max-width: 832px;
     font-family: 'Gryffensee';
     font-style: normal;
     font-weight: normal;
@@ -48,4 +57,3 @@ p {
     color: rgba(190,218,218,1);
     text-transform: uppercase;
 }
-
