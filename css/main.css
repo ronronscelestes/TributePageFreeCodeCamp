@@ -14,7 +14,7 @@
 }
 
 body {
-    background: rgba(61, 50, 75, 1);
+    /* background: rgba(61, 50, 75, 1); */
 }
 
 .wrapper-intro {
@@ -38,22 +38,139 @@ body {
 
 h1 {
     max-width: 832px;
-    font-family: 'Gryffensee';
+    font-family: "Gryffensee";
     font-style: normal;
     font-weight: normal;
     font-size: 132px;
-    line-height: 120px;
+    line-height: 0.9em;
     color: white;
     text-shadow: 8px 8px rgba(61, 50, 75, 0.8);
 }
 
-p {
+.p-intro {
     margin-top: 88px;
-    font-family: Six Caps;
+    font-family: "Six Caps";
     font-style: normal;
     font-weight: normal;
     font-size: 56px;
-    line-height: 74px;
+    line-height: 1.3em;
     color: rgba(190,218,218,1);
     text-transform: uppercase;
+}
+
+@media screen and (max-width: 700px) {
+    h1 {
+        font-size: 80px;
+    }
+
+    p {
+        font-size: 40px;
+    }
+}
+
+.bg-wrapper {
+    background-color: rgba(61, 50, 75, 1);
+    position: relative;
+}
+
+.container {
+    max-width: 1114px;
+    margin: 0 auto;
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.left-side {
+    max-width: 683px;
+    padding-right: 50px;
+}
+
+.bold-text {
+    font-family: "Six Caps";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 1.1em;
+    color: rgba(0,0,0,1);
+    margin-bottom: 40px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.white-bold-text {
+    color: white;
+}
+
+.smaller-text {
+    font-family: "DINpro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.3;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+}
+.white-smaller-text {
+    color: rgba(255,255,255,0.7);
+}
+
+.right-side {
+    max-width: 256px;
+}
+
+.tiny-text {
+    font-family: "DINpro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.3em;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+}
+
+.white-tiny-text {
+    color: rgba(190, 218, 218, 1);
+;
+}
+
+.img-sigil01 {
+    position: absolute;
+    width: 435px;
+    right: -200px;
+    top:0;
+    transform: rotate(7deg);
+}
+
+@media screen and (max-width: 700px) {
+    .left-side {
+        padding-right: 0px;
+    }
+    
+    .bold-text {
+        font-size: 40px;
+    }
+
+    .smaller-text {
+        font-size: 18px;
+    }
+
+    .tiny-text {
+        font-size: 18px;
+        margin-bottom: 37px;
+    }
+
+    .flex-container {
+        flex-direction: column-reverse;
+        transform: translateY(-100%);
+    }
+
+    .img-sigil01 {
+        transform: scale(0.5);
+        top: -120px;
+    }
 }
