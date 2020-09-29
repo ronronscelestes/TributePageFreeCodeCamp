@@ -77,14 +77,15 @@ h1 {
 .bg-wrapper {
     background-color: rgba(61, 50, 75, 1);
     position: relative;
-    height: 300px;
+    height: 500px;
+    /* height parce que sinon il s'étire en continu quand on réduit la page et du coup en mode tablette les 3 photos descendent très bas */
 }
 
 .container-sigil01 {
     width: 20%;
     position: absolute;
     right: 0;
-    bottom: 0;
+    top: 0;
 }
 
 .img-sigil01 {
@@ -102,6 +103,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
+    /* pourquoi pas en pourcentage? */
 }
 
 .left-side {
@@ -195,22 +197,25 @@ h1 {
     background-color: rgba(61, 50, 75, 1);
     position: relative;
     bottom: 100px;
-    height: 500px;
+    height: 340px;
     transform: skew(0deg, -4deg);
     z-index: -1;
 }
 
 .container-pictures {
-    height: 100px;
+    /* height: 100px; */
     display: flex;
     justify-content: center;
+    margin-top: -250px;
+    /* background-color: red; */
 }
 
 .content-pictures {
     max-width: 1180px;
     text-align: center;
-    transform: translateY(-400%);
+    /* transform: translateY(-400%); pourquoi pas un transform translate sur cet élément plutôt qu'un margin top sur container pictures? */
     position: relative;
+    /* background-color: blue; */
 }
 
 .img-triquetra-ring {
@@ -240,7 +245,7 @@ h1 {
         height: 100px;
         display: flex;
         position: relative;
-        bottom: 250px;
+        bottom: 400px;
     }
 
     .content-pictures {
