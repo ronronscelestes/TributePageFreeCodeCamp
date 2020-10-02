@@ -14,8 +14,10 @@
 }
 
 body {
-    /* background: rgba(61, 50, 75, 1); */
+    background: #FAFAFA;
 }
+
+/* Intro text + background image */
 
 .wrapper-intro {
     background-image: linear-gradient(to bottom, rgba(61, 50, 75, 0) 55%, rgba(61, 50, 75, 1)), url(../img/Headerforest_wide.png);
@@ -74,6 +76,8 @@ h1 {
     }
 }
 
+/* Text + sigil's picture  */
+
 .bg-wrapper {
     background-color: rgba(61, 50, 75, 1);
     position: relative;
@@ -93,7 +97,7 @@ h1 {
 }
 
 .container {
-    max-width: 1114px;
+    max-width: 1120px;
     margin: 0 auto;
     padding: 32px;
     box-sizing: border-box;
@@ -193,29 +197,36 @@ h1 {
     }
 }
 
+/* Skewed div background - messed up pictures if I made them only 1 section*/
+
 .wrapper-angled {
     background-color: rgba(61, 50, 75, 1);
     position: relative;
     bottom: 100px;
-    height: 340px;
+    height: 50vh;
     transform: skew(0deg, -4deg);
     z-index: -1;
 }
 
+@media screen and (max-width: 700px) {
+    .wrapper-angled {
+        height: 150px;
+    }
+}
+
+/* 3 pictures section */
+
 .container-pictures {
-    /* height: 100px; */
     display: flex;
     justify-content: center;
-    margin-top: -250px;
-    /* background-color: red; */
+    margin-top: -350px;
 }
 
 .content-pictures {
     max-width: 1180px;
     text-align: center;
     /* transform: translateY(-400%); pourquoi pas un transform translate sur cet élément plutôt qu'un margin top sur container pictures? */
-    position: relative;
-    /* background-color: blue; */
+    margin-bottom: 100px;
 }
 
 .img-triquetra-ring {
@@ -242,31 +253,255 @@ h1 {
 
 @media screen and (max-width: 700px) {
     .container-pictures {
-        height: 100px;
-        display: flex;
-        position: relative;
-        bottom: 400px;
+        margin-bottom: 0px;
+        margin-top: -200px;
     }
 
     .content-pictures {
-        text-align: unset;
+        display: flex;
+        flex-direction: column;
+        top: 100px;
     }
 
     .img-triquetra-ring {
-        width: 80%;
-        left: 10%;
+        width: 250px;
+        bottom: 250px;
     }
 
     .img-pink-quartz {
-        width: 70%;
-        left: 8%;
+        width: 200px;
+        bottom: 250px;
         z-index: 1;
     }
 
     .img-triple-moon {
-        width: 80%;
-        left: 10%;
-        bottom: 50px;
+        width: 250px;
+        bottom: 250px;
         z-index: 2;
     }
 }
+
+/* 3 pictures' captions  */
+
+.text-pictures-content {
+    max-width: 683px;
+    margin: 0;
+    margin-bottom: 240px;
+}
+
+@media screen and (max-width: 700px) {
+    .text-pictures-content {
+    max-width: 500px;
+    font-size: 40px;
+    position: relative;
+    bottom: 400px;
+    margin-bottom: 0px;
+    }
+}
+
+/* Wiccan Rede + sigil's picture number 2 */
+
+.wrapper-citation {
+    position: relative;
+    margin-bottom: 150px;
+}
+
+.container-citation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.first-text {
+    max-width: 976px;
+    margin-bottom: 40px;
+}
+
+.second-text {
+    max-width: 374px;
+    margin-bottom: 176px;
+}
+
+.gryffensee-text {
+    font-family: Gryffensee;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.big-gryffensee {
+    font-size: 132px;
+    line-height: 0.9em;
+    text-align: end;
+}
+
+.text-description {
+    max-width: 374px;
+    text-align: end;
+}
+
+.container-sigil02 {
+    width: 390px;
+    position: absolute;
+    left: 0;
+    top: 30%;
+}
+
+.img-sigil02 {
+    width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    .wrapper-citation {
+        bottom: 400px;
+        margin-bottom: -400px;
+    }
+
+    .first-text {
+        max-width: 340px;
+    }
+
+    .second-text {
+        max-width: 231px;
+    }
+
+    .big-gryffensee {
+        font-size: 80px;
+    }
+
+    .container-sigil02 {
+        width: 220px;
+    }
+}
+
+/* Big centered paragraphes */
+
+.smaller-wrapper {
+    position: relative;
+    max-width: 832px;
+    margin: 0 auto;
+    padding: 32px;
+    box-sizing: border-box;
+    margin-bottom: 180px;
+}
+
+@media screen and (max-width: 700px) {
+    .smaller-wrapper {
+    }
+}
+
+/* Bottom background + Conclusion text/wikipedia link + sigil picture number 3 + kitty svg + credits */
+
+.conclusion-container{
+    text-align: center;
+}
+
+.small-gryffensee {
+    font-size: 94px;
+    line-height: 1em;
+    margin-bottom: 70px;
+}
+
+.wikipedia-link {
+    text-decoration-line: none;
+    position: relative;
+}
+
+.wikipedia-link::before {
+    content: '';
+    width: 0px;
+    position: absolute;
+    border-bottom: 1px solid black;
+    bottom: 0;
+    transition: 0.7s all;
+}
+
+.wikipedia-link:hover::before {
+    left: 0;
+    width: 100%;
+}
+
+.bg-footer {
+    background-image: url(../img/Footerforest_wide.png);
+    background-size: cover;
+    height: 1280px;
+    background-position: center;
+    width: 100%;
+    position: relative;
+}
+
+.container-sigil03 {
+    width: 285px;
+    position: absolute;
+    right: 50%;
+    transform: translate(50%, 50%);
+}
+
+.img-sigil03 {
+    width: 100%;
+}
+
+.container-kitty {
+    position: absolute;
+    width: 126px;
+    bottom: 40px;
+}
+
+.kitty-picture {
+    width: 100%;
+    transition: 0.7s all;
+}
+
+.kitty-picture:hover {
+    transform: translateY(-10%);
+    transition: 0.7s all;
+}
+
+.credits-container {
+    position: absolute;
+    bottom: 80px;
+    right: 50%;
+    transform: translate(50%, 50%);
+    text-align: center;
+}
+
+.hugoleloup-position {
+    position: absolute;
+    right: 50%;
+    transform: translate(50%);
+    margin: 0;
+}
+
+.credits-underline {
+    text-decoration: none;
+    border-bottom: 1px solid white;
+}
+
+@media screen and (max-width: 700px) {
+    .small-gryffensee {
+        font-size: 70px;
+        line-height: 0.8em;
+    }
+
+    .conclusion-container {
+        position: relative;
+        top: -150px;
+    }
+
+    .container-sigil03 {
+        top: 350px;
+    }
+
+    .container-kitty {
+        bottom: 200px;
+    }
+
+    .credits-container {
+        bottom: 130px;
+        width: 300px;
+    }
+}
+
+
+
+
+
