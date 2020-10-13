@@ -81,7 +81,7 @@ h1 {
 .bg-wrapper {
     background-color: rgba(61, 50, 75, 1);
     position: relative;
-    height: 500px;
+    /* height: 500px; */
     /* height parce que sinon il s'étire en continu quand on réduit la page et du coup en mode tablette les 3 photos descendent très bas */
 }
 
@@ -225,7 +225,6 @@ h1 {
 .content-pictures {
     max-width: 1180px;
     text-align: center;
-    /* transform: translateY(-400%); pourquoi pas un transform translate sur cet élément plutôt qu'un margin top sur container pictures? */
     margin-bottom: 100px;
 }
 
@@ -264,19 +263,21 @@ h1 {
     }
 
     .img-triquetra-ring {
-        width: 250px;
+        width: 220px;
         bottom: 250px;
+        right: 20px;
     }
 
     .img-pink-quartz {
-        width: 200px;
-        bottom: 250px;
+        width: 180px;
+        bottom: 300px;
         z-index: 1;
     }
 
     .img-triple-moon {
-        width: 250px;
-        bottom: 250px;
+        width: 220px;
+        bottom: 350px;
+        right: 20px;
         z-index: 2;
     }
 }
@@ -431,9 +432,7 @@ h1 {
 
 .container-sigil03 {
     width: 285px;
-    position: absolute;
-    right: 50%;
-    transform: translate(50%, 50%);
+    margin: 245px auto 0;
 }
 
 .img-sigil03 {
@@ -457,6 +456,7 @@ h1 {
 }
 
 .credits-container {
+    width: 80%;
     position: absolute;
     bottom: 80px;
     right: 50%;
@@ -464,16 +464,10 @@ h1 {
     text-align: center;
 }
 
-.hugoleloup-position {
-    position: absolute;
-    right: 50%;
-    transform: translate(50%);
-    margin: 0;
-}
-
 .credits-underline {
     text-decoration: none;
     border-bottom: 1px solid white;
+    white-space: nowrap;
 }
 
 @media screen and (max-width: 700px) {
@@ -488,7 +482,7 @@ h1 {
     }
 
     .container-sigil03 {
-        top: 350px;
+        margin: 0 auto;
     }
 
     .container-kitty {
